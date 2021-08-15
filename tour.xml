@@ -1,0 +1,90 @@
+﻿<krpano version="1.20" title="Nhu-Ngoc DAO's home page">
+    <!-- skin layout
+	<style name="control_btn" url="%FIRSTXML%/skin/webskin.png" scale="0.5" />	 
+	<layer name="control_bar" type="container" align="bottom" width="1080" height="46" x="0" y="0" bgcolor="" bgalpha="" scalechildren="true" zorder="10" keep="true">
+		<layer name="googlescholar_btn" type="container" align="lefttop" width="360" height="46" x="0" y="0" bgcolor="0x4a4a4a" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="googlescholar" style="control_btn" crop="2|0|356|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://scholar.google.co.kr/citations?user=rWmFrIgAAAAJ',_blank);" />
+		</layer>
+		<layer name="resume_btn" type="container" align="lefttop" width="360" height="46" x="360" y="0" bgcolor="0xc60f30" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="resume" style="control_btn" crop="360|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://nndao.github.io/',_blank);" />
+		</layer>
+		<layer name="researchgate_btn" type="container" align="lefttop" width="360" height="46" x="720" y="0" bgcolor="0x00ccbb" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="researchgate" style="control_btn" crop="720|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://www.researchgate.net/profile/Nhu_Ngoc_Dao/publications',_blank);" />
+		</layer>
+	</layer>
+    -->
+	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-410" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(cau, null, MERGE, BLEND(1))"/>
+	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(unibe, null, MERGE, BLEND(1))"/>
+	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" scale="0.9" align="top" x="400" y="6" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(sju, null, MERGE, BLEND(1))"/>
+	
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		update2();
+		tween(layer[myresume].y,get(chieucao),0.1,linear,set(layer[myresume].visible,true));
+		loadscene(sju, null, MERGE);
+		if(startactions !== null, startactions());
+	</action>
+
+	<autorotate enabled="true"
+            waittime="0"
+            accel="1.0"
+            speed="1.0"
+            horizon="0.0"
+            tofov="off"
+            oneroundrange="360.0"
+            zoomslowdown="true"
+            interruptionevents="userviewchange|layers|keyboard"
+    />
+
+	<action name="update2">
+		sub(chieucao,get(stageheight),46);
+	</action>
+
+	<!-- My Resume 
+	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
+		<layer name="containercv" type="container" align="top" width="1080" height="100%" x="0" y="0" bgcolor="0x000000" bgalpha="0.1" keep="true" >
+			<layer name="scrollarea" url="%FIRSTXML%/plugins/scrollarea.swf" alturl="%FIRSTXML%/plugins/scrollarea.js" align="top" y="-46" width="1080" height="3444" direction="v" onloaded="setcenter(0,0)" >
+				<layer name="thumb_s1a1" url="%FIRSTXML%/cv/mycv.png" keep="true" align="top" width="1080" height="3444" preload="true"/>
+			</layer>
+		</layer>
+	</layer>
+-->
+
+	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-18); delayedcall(unibeload,120,loadscene(unibe, null, MERGE, BLEND(1)));" >
+
+		<view hlookat="0.0" vlookat="-18.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cau/preview.jpg" />
+
+		<image>
+			<cube url="panos/cau/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,1792" />
+		</image>
+
+	</scene>
+
+	
+	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12); delayedcall(sjuload,120,loadscene(sju, null, MERGE, BLEND(1)));" >
+
+		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/unibe/preview.jpg" />
+
+		<image>
+			<cube url="panos/unibe/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,-8); delayedcall(cauload,120,loadscene(cau, null, MERGE, BLEND(1)));" >
+
+		<view hlookat="0.0" vlookat="-8.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sju/preview.jpg" />
+
+		<image>
+			<cube url="panos/sju/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+</krpano>
