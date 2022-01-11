@@ -68,30 +68,6 @@
     </div>
   </section>
 
-  <section id="pro" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>PROFESSIONAL ACTIVITIES</h5>
-			  <ul class="lead" style="font-weight: bold;list-style-type:square;">
-					<li>Editor: <a href="https://www.nature.com/srep/about/editors#electrical-engineering">Scientific Reports</a>;</li>
-					<li>SI guest editor:
-						<ul class="lead">
-							<li>Wireless Communications and Mobile Computing: <a href="https://www.hindawi.com/journals/wcmc/si/781378/">[1]</a>, <a href="http://downloads.hindawi.com/journals/wcmc/si/193986.pdf">[2]</a></li> 
-							<li>Mobile Information Systems: <a href="https://www.hindawi.com/journals/misy/si/175218/">[1]</a></li>
-							<li>Electronics: <a href="https://www.mdpi.com/journal/electronics/special_issues/UIC_for_B5G_6G">[1]</a></li>
-						</ul>
-					</li>
-					<li>Invited talks: <a href="http://due.udn.vn/vi-vn/computing4human-intro/cid/4675">Computing4Human2021</a>;</li>
-					<li>Organizing committee member: <a href="https://icit2022.humg.edu.vn">ICIT2022</a>, <a href="https://doi.org/10.1109/ICOIN50884.2021.9334031">ICOIN2021</a>;</li>
-					<li>TPC member: <a href="https://doi.org/10.1109/COMNETSAT53002.2021.9530800">COMNETSAT2021</a>, <a href="https://doi.org/10.1109/Comnetsat50391.2020.9328945">COMNETSAT2020</a>, <a href="https://doi.org/10.1109/ISCIT.2019.8905141">ISCIT2019</a>, <a href="https://doi.org/10.1109/ICECIE47765.2019.8974660">ICECIE2019</a>, <a href="https://doi.org/10.1109/ICOIN.2018.8343069">ICOIN2018</a>;</li>
-					<li>Reviewer: IEEE JSAC, TVT, TCC, TITS, IOTJ, CIM, WCM, ACCESS, COMSTD, Elsevier JNCA, Wiley NEM, Springer WIRE, etc.</li>
-				</ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <section id="others" class="bg-light">
     <div class="container">
@@ -115,6 +91,21 @@
 				  <ul class="lead">
 					<li>CCNP (2010), CCNA (2008), and CWNA (2008).</li>
 				  </ul>				
+				</li>
+				<li>Professional activities:
+				  <ul class="lead">
+					<li>Editor: <a href="https://www.nature.com/srep/about/editors#electrical-engineering">Scientific Reports</a>;</li>
+					<li>SI guest editor:
+            <ul class="lead" style="list-style-type: '- '">
+              <li>Wireless Communications and Mobile Computing: <a href="https://www.hindawi.com/journals/wcmc/si/781378/">[1]</a>, <a href="http://downloads.hindawi.com/journals/wcmc/si/193986.pdf">[2]</a></li> 
+              <li>Mobile Information Systems: <a href="https://www.hindawi.com/journals/misy/si/175218/">[1]</a></li>
+              <li>Electronics: <a href="https://www.mdpi.com/journal/electronics/special_issues/UIC_for_B5G_6G">[1]</a></li>
+            </ul>
+          </li>
+					<li>Organizing committee member: <a href="https://doi.org/10.1109/ICOIN50884.2021.9334031">ICOIN2021</a>;</li>
+					<li>TPC member: <a href="https://doi.org/10.1109/Comnetsat50391.2020.9328945">COMNETSAT2020</a>, <a href="https://doi.org/10.1109/ISCIT.2019.8905141">ISCIT2019</a>, <a href="https://doi.org/10.1109/ICECIE47765.2019.8974660">ICECIE2019</a>, <a href="https://doi.org/10.1109/ICOIN.2018.8343069">ICOIN2018</a>;</li>
+					<li>Reviewer: IEEE JSAC, TVT, TCC, TITS, IOTJ, CIM, WCM, ACCESS, COMSTD, Elsevier JNCA, Wiley NEM, Springer WIRE, etc.</li>
+				  </ul>
 				</li>
 				<li>Social activities:
 				  <ul class="lead">
