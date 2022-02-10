@@ -22,8 +22,9 @@
 
   <header class="bg-primary text-white">
     <div class="container text-center">
-      <h1>PSHH Laboratory</h1>
-      <p class="lead" style="text-align:center;">Department of Computer Science and Engineering, Sejong University, Seoul 05006, Republic of Korea.<br>[<a href="#research">#intro</a>] [<a href="#member">#member</a>] [<a href="#project">#project</a>] [<a href="#chapter">#publication</a>]</p>
+		<img src="logo.png" width="293" height="86">
+      <!-- <h1>PSHH Laboratory</h1> -->
+      <p class="lead" style="text-align:center;"><br>Department of Computer Science and Engineering, Sejong University, Seoul 05006, Republic of Korea.<br>[<a href="#research">#intro</a>] [<a href="#project">#project</a>] [<a href="#chapter">#publication</a>]</p>
     </div>
   </header>
 
@@ -31,18 +32,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>INTRODUCTION <a href="#page-top">&#9776;</a></h5>
+          <h5>INTRODUCTION <a href="#page-top" title="Home">&#9776;</a></h5>
           <p class="lead">Privacy-Sensitive Heterogeneous Hypercomputing (PSHH) lab is led by <a href="nndao">Dr. Nhu-Ngoc Dao</a> at the Department of Computer Science and Engineering, Sejong University, Seoul. Our lab investigates technological challenges in the research fields of networks, systems, and communications for the aim of intelligent human networking. Currently, we focus on developing cutting-edge solutions of network softwarization, mobile cloudization, intelligent systems, and the Intelligence of Things toward B5G/6G. Directly contact <a href="nndao">Nhu-Ngoc Dao</a> if you are willing to be a member of our family. Korean and international citizens are all welcome!</p>
         </div>
       </div>
     </div>
   </section>
-
+<!--
   <section id="member" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>MEMBERS <a href="#page-top">&#9776;</a></h5>
+          <h5>MEMBERS <a href="#page-top" title="Home">&#9776;</a></h5>
 		  <ul class="lead" style="list-style-type:square">
 			<li>Nhu-Ngoc Dao, Assistant Professor, Director</li>
 			<li>The-Vinh Nguyen (Vietnam), MS student since 9/2021</li>
@@ -51,12 +52,12 @@
       </div>
     </div>
   </section>
-
+-->
   <section id="project" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>PROJECTS <a href="#page-top">&#9776;</a></h5>
+          <h5>PROJECT <a href="#page-top" title="Home">&#9776;</a></h5>
 		  <ul class="lead" style="list-style-type:square">
 			<li>Intelligent adaptive bitrate video streaming empowered by cross-tier user-centric edge caching systems, Korean NRF, 03/2021-02/2024.</li>
 			<li>Hit ratio and content quality tradeoff for adaptive bitrate streaming in edge caching systems, SejongIACF, 03/2020-02/2021.</li>
@@ -70,7 +71,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>BOOK CHAPTER <a href="#page-top">&#9776;</a></h5>
+          <h5>BOOK CHAPTER <a href="#page-top" title="Home">&#9776;</a></h5>
 			  <ol class="lead">
 				<li><b>Dao NN</b>, Dinh NT, Pham QV, Phan TV, Cho S, and Braun T, "Vulnerabilities in fog/edge computing from architectural perspectives", Chapter 8, in <i>Fog/edge computing for security, privacy, and applications</i>, Wu J and Chang W [Eds], Springer, Cham, Switzerland, 2021. [<a href="https://doi.org/10.1007/978-3-030-57328-7_8">Springer</a>].</li>
 				<li><b>Dao NN</b>, Tran QD, Dinh NT, Cho S, and Braun T, "Edge computing architectures", Chapter 2, in <i>Edge computing: Models, technologies and applications</i>, Taheri J and Deng S [Eds], The Institution of Engineering and Technology (IET), London, UK, 2020. [<a href="https://doi.org/10.1049/PBPC033E_ch2">IET</a>].</li>
@@ -84,7 +85,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>JOURNAL PUBLICATION [<a href="#project">&#129093;</a>] [<a href="#conference">&#129095;</a>] <a href="#page-top">&#9776;</a></h5>
+          <h5>JOURNAL PUBLICATION [<a href="#project" title="Project">&#129093;</a>] [<a href="#conference" title="Conference publication">&#129095;</a>] <a href="#page-top" title="Home">&#9776;</a></h5>
 			  <ol class="lead">
 				<li><b>Dao NN</b>, Vu DN, Tran AT, Phan TV, Dustdar S, and Cho S, "On system stability in multitier roadside computing toward an intelligent transportation", <i>IEEE Transactions on Network Science and Engineering</i>. In press. [<a href="https://doi.org/10.1109/TNSE.2021.3133283">IEEE</a>].</li>
 				<li>Nguyen TV, <b>Dao NN</b>, Tuong VD, Noh W, and Cho S, "User-aware and flexible proactive caching using LSTM and ensemble learning in IoT-MEC networks", <i>IEEE Internet of Things Journal</i>. In press. [<a href="https://doi.org/10.1109/JIOT.2021.3097768">IEEE</a>].</li>
@@ -92,6 +93,7 @@
 				<li><b>Dao NN</b>, Phan TV, Sa'ad U, Kim J, Bauschert T, Do DT, and Cho S, "Securing heterogeneous IoT with intelligent DDoS attack behavior learning", <i>IEEE Systems Journal</i>. In press. [<a href="https://doi.org/10.1109/JSYST.2021.3084199">IEEE</a>].</li>
 				<li>Lakew DS, Na W, <b>Dao NN</b>, and Cho S, "Aerial energy orchestration for heterogeneous UAV-assisted wireless communications", <i>IEEE Systems Journal</i>. In press. [<a href="https://doi.org/10.1109/JSYST.2021.3075316">IEEE</a>].</li>
 				<li>Vu DN, <b>Dao NN</b>, Na W, and Cho S, "Dynamic resource orchestration for service capability maximization in fog-enabled connected vehicle networks", <i>IEEE Transactions on Cloud Computing</i>. In press. [<a href="https://doi.org/10.1109/TCC.2020.3001289">IEEE</a>].</li>
+        <li>Sahu SK, Mohapatra DP, Rout JK, Sahoo KS, Pham QV, <b>Dao NN</b>, "A LSTM-FCNN based multi-class intrusion detection using scalable framework", <i>Computers and Electrical Engineering</i>, vol. 99, p. 107720, 2022. [<a href="https://doi.org/10.1016/j.compeleceng.2022.107720">Elsevier</a>].</li>
 				<li>Do DT, Le AT, Xuan Ha ND, and <b>Dao NN</b>, "Physical layer security for Internet of things via reconfigurable intelligent surface", <i>Future Generation Computer Systems</i>, vol. 126, pp. 330-339, 2022. [<a href="https://doi.org/10.1016/j.future.2021.08.012">Elsevier</a>].</li>
 				<li>Ramasubbareddy S, Ramasamy S, Sahoo KS, Kumar RL, Pham QV, and <b>Dao NN</b>, "CAVMS: Application-aware cloudlet adaption and VM selection framework for multi-cloudlet environment", <i>IEEE Systems Journal</i>, vol. 15, no. 4, pp. 5098-5106, 2021. [<a href="https://doi.org/10.1109/JSYST.2020.3029807">IEEE</a>].</li>
 				<li><b>Dao NN</b>, Ngo DT, Dinh NT, Phan TV, Vo ND, Cho S, and Braun T, "Hit ratio and content quality tradeoff for adaptive bitrate streaming in edge caching systems", <i>IEEE Systems Journal</i>, vol. 15, no. 4, pp. 5094-5097, 2021. [<a href="https://doi.org/10.1109/JSYST.2020.3019035">IEEE</a>].</li>
@@ -140,9 +142,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>CONFERENCE PUBLICATION [<a href="#journal">&#129093;</a>] [<a href="#patent">&#129095;</a>] <a href="#page-top">&#9776;</a></h5>
+          <h5>CONFERENCE PUBLICATION [<a href="#journal" title="Journal publication">&#129093;</a>] [<a href="#patent" title="Patent">&#129095;</a>] <a href="#page-top" title="Home">&#9776;</a></h5>
   			  <ol class="lead">
-	  		    <li>Tuong VD, <b>Dao NN</b>, Noh W, Cho S, "Dynamic time division duplexing for green Internet of things", <i>IEEE International Conference on Information Networking (ICOIN)</i>, pp. 1-1, Jeju island, Korea, January 12-15, 2022. [<a href="">IEEE</a>].</li>
+	  		    <li>Tuong VD, <b>Dao NN</b>, Noh W, Cho S, "Dynamic time division duplexing for green Internet of things", <i>IEEE International Conference on Information Networking (ICOIN)</i>, pp. 356-368, Jeju island, Korea, January 12-15, 2022. [<a href="https://doi.org/10.1109/ICOIN53446.2022.9687184">IEEE</a>].</li>
  	  		    <li>Le BL, Lam GH, Nguyen XV, Nguyen TM, Duong QL, Tran QD, Do TH, <b>Dao NN</b>, "A deep learning based traffic sign detection for intelligent transportation systems", <i>International Conference on Computational Data and Social Networks (CSoNet)</i>, pp. 129-137, Montreal, Canada, November 15-17, 2021. [<a href="https://doi.org/10.1007/978-3-030-91434-9_12">Springer</a>].</li>
   				<li>Lakew DS, Tran AT, <b>Dao NN</b>, and Cho S, "Intelligent offloading and resource allocation in HAP-assisted MEC networks", <i>IEEE International Conference on Information and Communication Technology Convergence (ICTC)</i>, pp. 1582-1587, Jeju island, Korea, October 20-22, 2021. [<a href="https://doi.org/10.1109/ICTC52510.2021.9621158">IEEE</a>]. (<b>Best Paper Award</b>)</li>
 	  		    <li>Nguyen XV, Lam GH, Le QN, Duong QL, Nguyen TM, Le BL, Tran QD, Do TH, <b>Dao NN</b>, "Intelligent augmented video streaming services using lightweight QR code scanner", <i>IEEE International Conference on Communication, Networks and Satellite (COMNETSAT)</i>, pp. 103-107, Purwokerto, Indonesia, July 17-18, 2021. [<a href="http://doi.org/10.1109/COMNETSAT53002.2021.9530819">IEEE</a>].</li>
@@ -172,7 +174,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <h5>PATENT [<a href="#conference">&#129093;</a>] <a href="#page-top">&#9776;</a></h5>
+          <h5>PATENT [<a href="#conference" title="Conference publication">&#129093;</a>] <a href="#page-top" title="Home">&#9776;</a></h5>
 			  <ol class="lead">
 				<li>Cho S, Vu DN, and <b>Dao NN</b>, "The method for scheduling tasks in real time using pattern-identification in multitier edge computing and the system thereof", <i>Korean patent KR102068676</i>, January 15, 2020. [<a href="https://doi.org/10.8080/1020180089619?urlappend=en">KIPRIS</a>].</li>
 				<li>Cho S, Vu DN, and <b>Dao NN</b>, "Dynamic resource orchestration for fog-enabled industrial Internet of things networks", <i>Korean patent KR102056894</i>, December 17, 2019. [<a href="https://doi.org/10.8080/1020180088787?urlappend=en">KIPRIS</a>].</li>
@@ -186,28 +188,27 @@
     </div>
   </section>
 
-<!--   <section id="others" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>AWARDS</h5>
-			  <ul class="lead" style="font-weight: bold;list-style-type:square;">
-			  </ul>
-        </div>
-      </div>
-    </div>
-  </section>
- -->
 
-
-
-  <!-- Footer -->
   <footer class="py-5 bg-dark">
+ <!-- Default Statcounter code for PSHH lab https://pshhlab.github.io -->
     <div class="container">
-      <!-- <p class="m-0 text-center text-white">Copyright &copy; nnDAO 2020</p> -->
-    </div>
-    <!-- /.container -->
-  </footer>
+<p class="lead" style="text-align:right;">
+<script type="text/javascript">
+var sc_project=12714332; 
+var sc_invisible=0; 
+var sc_security="8873dfa3"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="The number of visistors"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12714332/0/8873dfa3/0/" alt="The number of visistors"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</p>
+</div>
+</footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
