@@ -189,7 +189,7 @@
   </section>
 
 
-  <!-- <footer class="py-5 bg-dark">
+  <footer class="py-5 bg-dark">
  <!-- Default Statcounter code for PSHH lab https://pshhlab.github.io -->
     <div class="container">
 <p class="lead" style="text-align:right;">
@@ -208,7 +208,7 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 </p>
 </div>
-
+</footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
