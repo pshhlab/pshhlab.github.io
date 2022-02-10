@@ -188,7 +188,11 @@
     </div>
   </section>
 
-<!-- Default Statcounter code for PSHH lab https://pshhlab.github.io -->
+
+
+  Footer
+  <footer class="py-5 bg-dark">
+ <!-- Default Statcounter code for PSHH lab https://pshhlab.github.io -->
 <script type="text/javascript">
 var sc_project=12714332; 
 var sc_invisible=0; 
@@ -202,12 +206,8 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/12714332/0/8873dfa3/0/" alt="The number of visistors"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+</footer>
 
-
-  <!-- Footer
-  <footer class="py-5 bg-dark">
-  </footer>
-  -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
