@@ -1,0 +1,58 @@
+<krpano>
+
+	<!-- du lieu chuyen ngu anh han -->
+	<strings name="english"
+		rotateButton = "Auto-rotation"
+		fullsrButton = "Full screen"
+		socialButton = "Share"
+		nextButton = "Next scene"
+		previousButton = "Previous scene"
+		madebytext = "Produced by 360PRO.VN"
+		autoPlayButton = "Auto-play"
+		VRButton = "VR mode"
+		s1title = "National Assembly Hall"
+		s1a1 = "National Assembly Hall"
+		texts1a1 = "[b]National Assembly Hall[/b][br/][br/]
+		The National Assembly Proceeding Hall is the building that serves as the location of the National Assembly of the Republic of Korea, the legislative branch of the South Korean national government. It is located at Yeouido-dong, Yeongdeungpo-gu, Seoul.[br/][br/]
+		The current building was completed in 1975. Before 1975 the South Korean government used the General-Government Building. The plenary chamber has seating for 400 people, ostensibly in preparation for new lawmakers in case Korean reunification actually occurs."
+		s2title = "Yeoeuido Park"
+		s2a1 = "Yeoeuido Park"
+		texts2a1 = "[b]Yeoeuido Park[/b][br/][br/]
+		Yeoido Park is located in Yeouido-dong, Yeongdeungpo-gu. Its 229,538 m² area consists of 4 zones: Korean traditional garden, green area, cultural plaza, and natural ecological forest. These spaces are famous for nature, culture, and sports for all citizens. Nearby office workers also come here to relax on short breaks.[br/][br/]
+		Tourists can enjoy a leisurely view of Seoul's modern skyline and Nam-san from one of the cruise boats that ply between Yeouido lsland and Jamsil. Water sports are also becoming increasingly popular. Because of its transformation into a sophisticated government and financial center, the island of Yeouido is sometimes called the Manhattan of Seoul."
+		s3title = "Yeoeuido Camping Area"
+		s3a1 = "Yeoeuido Camping Area"
+		texts3a1 = "[b]Yeoeuido Camping Area[/b][br/][br/]
+		Yeoido Park is located in Yeouido-dong, Yeongdeungpo-gu. Its 229,538 m² area consists of 4 zones: Korean traditional garden, green area, cultural plaza, and natural ecological forest. These spaces are famous for nature, culture, and sports for all citizens. Nearby office workers also come here to relax on short breaks.[br/][br/]
+		Tourists can enjoy a leisurely view of Seoul's modern skyline and Nam-san from one of the cruise boats that ply between Yeouido lsland and Jamsil. Water sports are also becoming increasingly popular. Because of its transformation into a sophisticated government and financial center, the island of Yeouido is sometimes called the Manhattan of Seoul."
+	/>
+
+	<strings name="korean"
+		rotateButton = "자동 회전"
+		fullsrButton = "전체 화면"
+		socialButton = "몫"
+		nextButton = "다음 장면"
+		previousButton = "이전 장면"
+		madebytext = "360PRO.VN에 의해 생산"
+		autoPlayButton = "자동 재생"
+		VRButton = "VR mode"
+		s1title = "국회의사당"
+		s1a1 = "국회의사당"
+		texts1a1 = "[b]국회의사당[/b][br/][br/]
+		국회의사당은 대한민국 국회의 회의가 열리는 건물이다. 주소는 서울특별시 영등포구 의사당대로 1 (여의도동 1번지) 이다.[br/][br/]
+		1975년 8월 15일 준공되었다. 준공까지 사용된 건설비는 135억원이었다. 본회의장과 5,6층을 제외하고도 개인사무실등 260여개가 있으며, 너비 3m의 복도의 총 연장이 3.5km이나 되었다."
+		s2title = "여의도 공원"
+		s2a1 = "여의도 공원"
+		texts2a1 = "[b]여의도 공원[/b][br/][br/]
+		여의도 공원은 여의도를 남북으로 관통하는 주 도로변 약 231제곱미터 부지에 조성된 공원이다. 과거 5.16 광장이라고 부르다 여의도 광장으로 이름이 변경됐고, 이후 대단위 근린 공원으로 탈바꿈해 지금의 여의도 공원이 됐다.[br/][br/]
+		여의도 공원에서 즐길 수 있는 공간은 크게 네 군데로 나뉜다. 남쪽 자연 생태의 숲에서 시작해 북쪽으로 가면서 문화의 마당, 잔디마당 그리고 한국 전통의 숲이 형성되어 있다. 각 공간은 각각 주제에 맞게 그 특색을 살려 조성됐다. 자연 생태의 숲은 산책로가 잘 조성되어 있고, 생태 연못과 숲 사이를 거닐며 도심 속에서 여유롭게 자연을 즐길 수 있는 공간이다. 숲에서 서식하는 동식물도 균형을 유지하며 생태에 자연스레 녹아든다. 무엇보다 경관이 수려해 찾는 이에게 자연이 주는 편안함과 보는 즐거움도 안긴다. 다람쥐 같은 야생 동물을 방사해 도심의 색다른 볼거리가 되고 있다.[br/][br/]
+		문화의 마당은 거대한 광장이다. 여의도 공원 하면 가장 먼저 떠오르는 풍경. 자전거나 인라인 스케이트 등 각종 스포츠를 즐기는 사람들로 주말이나 휴일이면 북새통을 이룬다. 광장의 바깥으로는 가볍게 산책을 즐기거나 아이들과 소풍을 나온 가족들의 모습도 보인다."
+		s3title = "캠핑장"
+		s3a1 = "캠핑장"
+		texts3a1 = "[b]캠핑장[/b][br/][br/]
+		여의도 공원은 여의도를 남북으로 관통하는 주 도로변 약 231제곱미터 부지에 조성된 공원이다. 과거 5.16 광장이라고 부르다 여의도 광장으로 이름이 변경됐고, 이후 대단위 근린 공원으로 탈바꿈해 지금의 여의도 공원이 됐다.[br/][br/]
+		여의도 공원에서 즐길 수 있는 공간은 크게 네 군데로 나뉜다. 남쪽 자연 생태의 숲에서 시작해 북쪽으로 가면서 문화의 마당, 잔디마당 그리고 한국 전통의 숲이 형성되어 있다. 각 공간은 각각 주제에 맞게 그 특색을 살려 조성됐다. 자연 생태의 숲은 산책로가 잘 조성되어 있고, 생태 연못과 숲 사이를 거닐며 도심 속에서 여유롭게 자연을 즐길 수 있는 공간이다. 숲에서 서식하는 동식물도 균형을 유지하며 생태에 자연스레 녹아든다. 무엇보다 경관이 수려해 찾는 이에게 자연이 주는 편안함과 보는 즐거움도 안긴다. 다람쥐 같은 야생 동물을 방사해 도심의 색다른 볼거리가 되고 있다.[br/][br/]
+		문화의 마당은 거대한 광장이다. 여의도 공원 하면 가장 먼저 떠오르는 풍경. 자전거나 인라인 스케이트 등 각종 스포츠를 즐기는 사람들로 주말이나 휴일이면 북새통을 이룬다. 광장의 바깥으로는 가볍게 산책을 즐기거나 아이들과 소풍을 나온 가족들의 모습도 보인다."
+	/>
+
+</krpano>

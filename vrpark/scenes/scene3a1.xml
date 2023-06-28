@@ -1,0 +1,38 @@
+<krpano>
+	<scene name="s3a1" title="s3a1title" onstart="spotactive(spot3a1); clearthumbborder(thumbb_s3); set(textinbox, 'texts3a1'); if(autoplay == true, autoShow()); updatetext(); set(scenename, 's3a1'); " thumburl="%FIRSTXML%/panos/s3a1/thumb.jpg" lat="" lng="" heading="" havevrimage="true">
+
+		<view hlookat="180" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="%FIRSTXML%/panos/s3a1/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="%FIRSTXML%/panos/s3a1/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="%FIRSTXML%/panos/s3a1/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="%FIRSTXML%/panos/s3a1/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="%FIRSTXML%/panos/s3a1/mobile_%s.jpg" />
+			</mobile>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="%FIRSTXML%/panos/s3a1/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_ani_white" ath="-100" atv="-2" 
+				 onhover="if(!webvr.isenabled, set(layer[tooltip].html, get(strings[get(language)].s2a1)); set(autorotate.enabled, 'false'); hientooltip1(); hienthumb(s2a1););" 
+				 onout="tween(layer[tooltip].alpha, 0.0, 0.25, default); set(autorotate.enabled, 'true'); set(layer[hotspotthumbbg].visible, false);"
+		         onclick="tween(layer[tooltip].alpha, 0.0, 0.25, default); set(autorotate.enabled, 'true'); set(layer[hotspotthumbbg].visible, false);
+						  loadscene(s2a1,null,MERGE,BLEND(1));
+		                  set(view.architectural,1.0);
+		                  wait(BLEND);
+		                  tween(view.architectural,0.0,2.0);
+		                  oninterrupt( tween(view.architectural,0.0,0.5) );
+		                  "
+		         />	
+
+	</scene>
+</krpano>
