@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=1100"
+  />
+
+  <title>PSHH Laboratory, Sejong University</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: none;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+
+      background: #d1d5db;
+
+      font-family: "Inter", sans-serif;
+
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+
+    a {
+      color: #0068FF;
+    }
+
+    /* =======================================================
+       FIXED A4 LAYOUT
+    ======================================================= */
+
+    .page-wrapper {
+
+      width: 100vw;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      overflow: auto;
+    }
+
+    .a4-page {
+
+      width: 1100px;
+      min-height: 1123px;
+
+      background: white;
+
+      transform-origin: top center;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.15);
+
+      position: relative;
+    }
+
+    /* =======================================================
+       CONTENT
+    ======================================================= */
+
+    .container {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    /* HERO */
+
+    .hero {
+
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+      background:#526379;
+
+      text-align: center;
+    }
+
+    .hero h1 {
+
+      font-size: 36px;
+      font-weight: 700;
+
+      letter-spacing: -1.5px;
+
+      color: #ffffff;
+
+      margin-bottom: 5px;
+
+    }
+
+    .hero p {
+
+      font-size: 14px;
+
+      color: #d1d1d1;
+
+      font-weight: 400;
+
+    }
+
+    /* SECTION */
+
+    section {
+
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .section-title {
+
+      font-size: 25px;
+      font-weight: 700;
+
+      color: #111827;
+
+      margin-bottom: 15px;
+
+      letter-spacing: -0.5px;
+    }
+
+    /* ABOUT */
+
+    .about-text {
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      color: #374151;
+
+      text-align: justify;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* PROJECT TABLE STYLE */
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .project-item {
+
+      display: grid;
+
+      grid-template-columns: 1fr 155px;
+
+      gap: 5px;
+
+      padding: 0 0;
+
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .project-time {
+
+      font-style: italic;
+
+      color: #4b5563;
+
+      text-align: right;
+
+      font-size: 16px;
+
+      padding-top: 4px;
+    }
+
+    .project-content p {
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      color: #6b7280;
+    }
+
+    /* STUDENT */
+
+    .student-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 14px;
+
+      list-style-position: outside;
+    }
+
+    .student-item {
+
+      line-height: 1.7;
+      color: #4b5563;
+      font-size: 16px;
+    }
+
+    /* Journal */
+
+    .journal-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 30px;
+
+      list-style-position: outside;
+    }
+
+    /* Patent */
+
+    .patent-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 20px;
+
+      list-style-position: outside;
+    }
+
+    /* MEMBER DIVIDER */
+
+    .member-divider {
+
+      position: relative;
+
+      text-align: center;
+
+      /* margin-top: 18px; */
+      margin-bottom: 18px;
+
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .member-divider span {
+
+      display: inline-block;
+
+      position: relative;
+
+      top: 10px;
+
+      padding: 0 14px;
+
+      background: white;
+
+      font-size: 14px;
+
+      font-weight: 400;
+
+      letter-spacing: 1px;
+
+      /* text-transform: uppercase; */
+
+      color: #9ca3af;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      border-top: 1px solid #e5e7eb;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #6b7280;
+
+      background:#c8c8c8;
+    }
+
+    /* TELEGRAM FLOATING BUTTON */
+
+    .telegram-floating {
+
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 62px;
+      height: 62px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #229ED9;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 28px;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+
+      transition: 0.25s;
+
+      z-index: 9999;
+    }
+
+    .telegram-floating:hover {
+
+      transform: scale(1.08);
+    }
+
+
+.result-card{
+
+  margin-top:15px;
+
+  border-left:4px solid #526379;
+
+  padding:15px;
+
+  background:#f9fafb;
+
+  border-radius:4px;
+}
+
+.good{
+  color:#16a34a;
+  font-weight:600;
+}
+
+.medium{
+  color:#ca8a04;
+  font-weight:600;
+}
+
+.bad{
+  color:#dc2626;
+  font-weight:600;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =======================================================
+       PAGE WRAPPER
+  ======================================================== -->
+
+  <div class="page-wrapper">
+
+    <div class="a4-page" id="home">
+
+      <!-- header -->
+
+      <div class="hero">
+
+        <div class="container">
+
+          <img src="logo.png" width="293" height="86">
+
+          <h1>
+            <br>CA Configuration Analyzer
+          </h1>
+
+        </div>
+
+      </div>
+
+      <!-- about -->
+
+      <section>
+
+        <div class="container">
+
+          <div class="project-list">
+
+                <h2 class="section-title">
+                  Introduction
+                </h2>
+
+                <p class="about-text">
+                  This tool calculates valid carrier aggregation configurations under bandwidth and component carrier constraints. The tool was developed by <a href="https://www.linkedin.com/in/maksim-k-82115b255">Maksim K.</a>
+                </p>
+
+            <div class="project-item">
+              <div class="project-content">
+                <p>CA Configuration</p>
+              </div>
+              <div>
+                <input
+                  id="caInput"
+                  value="CA_1A_2B_3C"
+                  style="width:100%;padding:8px;">
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-content">
+                <p>Maximum number of CCs</p>
+              </div>
+              <div>
+                <input
+                  id="maxCC"
+                  type="number"
+                  value="5"
+                  style="width:100%;padding:8px;">
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-content">
+                <p>Maximum Bandwidth (MHz)</p>
+              </div>
+              <div>
+                <input
+                  id="maxBW"
+                  type="number"
+                  value="100"
+                  style="width:100%;padding:8px;">
+              </div>
+            </div>
+
+          </div>
+
+          <br>
+
+          <button
+            onclick="analyzeCA()"
+            style="
+              background:#526379;
+              color:white;
+              border:none;
+              padding:10px 24px;
+              cursor:pointer;
+              border-radius:4px;">
+            Analyze
+          </button>
+
+          <div id="output"
+              style="margin-top:25px;">
+          </div>
+
+        </div>
+
+    </section>
+
+    </div>
+
+  </div>
+
+  <!-- =======================================================
+       FLOATING CHAT
+  ======================================================== -->
+
+  <div class="floating-chat">
+
+    <a
+      href="https://t.me/nhungocdao"
+      target="_blank"
+      class="telegram-floating"
+    >
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+
+  </div>
+
+  <!-- =======================================================
+       SCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =======================================================
+       FIXED A4 AUTO SCALE
+    ======================================================= */
+
+    function scaleA4Page() {
+
+      const page =
+        document.querySelector(".a4-page");
+
+      const wrapper =
+        document.querySelector(".page-wrapper");
+
+      const screenWidth =
+        window.innerWidth - 40;
+
+      const screenHeight =
+        window.innerHeight - 40;
+
+      const scaleX =
+        screenWidth / 794;
+
+      const scaleY =
+        screenHeight / 1123;
+
+      const scale =
+        Math.min(scaleX, scaleY, 1);
+
+      page.style.transform =
+        `scale(${scale})`;
+
+      wrapper.style.height =
+        `${1123 * scale + 40}px`;
+    }
+
+    window.addEventListener(
+      "resize",
+      scaleA4Page
+    );
+
+    scaleA4Page();
+
+  </script>
+
+
+<!-- CA analysis -->
+<script>
+
+const STANDARD_BW = [1.4,3,5,10,15,20];
+
+function getClassData(){
+
+    const pairs = [];
+
+    for(let a of STANDARD_BW){
+        for(let b of STANDARD_BW){
+            pairs.push([a,b]);
+        }
+    }
+
+    return {
+        A: STANDARD_BW.map(bw => [bw]),
+
+        B: [
+            ...STANDARD_BW.map(bw => [bw]),
+            ...pairs.filter(p => p[0]+p[1] <= 20)
+        ],
+
+        C: pairs.filter(
+            p => p[0]+p[1] > 20 &&
+                 p[0]+p[1] <= 40
+        )
+    };
+}
+
+function cartesian(arrays){
+
+    return arrays.reduce(
+        (acc,curr)=>
+            acc.flatMap(a =>
+                curr.map(b => [...a,b])
+            ),
+        [[]]
+    );
+}
+
+function analyzeCA(){
+
+    const caInput =
+        document.getElementById("caInput")
+        .value
+        .toUpperCase();
+
+    const maxCC =
+        parseInt(
+            document.getElementById("maxCC").value
+        );
+
+    const maxBW =
+        parseFloat(
+            document.getElementById("maxBW").value
+        );
+
+    const data = getClassData();
+
+    const matches =
+        [...caInput.matchAll(/(\d+)([ABC])/g)];
+
+    if(matches.length === 0){
+
+        document.getElementById("output").innerHTML =
+            "<b>Invalid CA Configuration</b>";
+
+        return;
+    }
+
+    const bandOptions =
+        matches.map(m => data[m[2]]);
+
+    const rawCombos =
+        cartesian(bandOptions);
+
+    const valid =
+        rawCombos.filter(combo => {
+
+            const totalCC =
+                combo.reduce(
+                    (s,x)=>s+x.length,
+                    0
+                );
+
+            const totalBW =
+                combo.reduce(
+                    (s,x)=>
+                        s + x.reduce(
+                            (a,b)=>a+b,
+                            0
+                        ),
+                    0
+                );
+
+            return totalCC <= maxCC &&
+                   totalBW <= maxBW;
+        });
+
+    let html = "";
+
+    html += `<h2>CA Analysis Report</h2>`;
+
+    if(valid.length === 0){
+
+        html += `
+        <p style="color:red">
+        No valid carrier allocation found.
+        </p>`;
+
+        document.getElementById("output").innerHTML =
+            html;
+
+        return;
+    }
+
+    const structures = {};
+
+    valid.forEach(v => {
+
+        const key =
+            v.map(x => x.length)
+             .join("-");
+
+        if(!structures[key]){
+            structures[key] = [];
+        }
+
+        structures[key].push(v);
+    });
+
+    const sortedKeys =
+        Object.keys(structures)
+              .sort((a,b) => {
+
+            const sumA =
+                a.split("-")
+                 .reduce(
+                    (s,x)=>s+Number(x),
+                    0
+                 );
+
+            const sumB =
+                b.split("-")
+                 .reduce(
+                    (s,x)=>s+Number(x),
+                    0
+                 );
+
+            return sumA - sumB;
+        });
+
+    for(const key of sortedKeys){
+
+        const combos =
+            structures[key];
+
+        const struct =
+            key.split("-")
+               .map(Number);
+
+        const bandCounts = [];
+
+        for(let i=0;i<struct.length;i++){
+
+            const unique =
+                new Set(
+                    combos.map(
+                        c => JSON.stringify(c[i])
+                    )
+                );
+
+            bandCounts.push(
+                unique.size
+            );
+        }
+
+        const subtotal =
+            bandCounts.reduce(
+                (a,b)=>a*b,
+                1
+            );
+
+        const validCombinations =
+            combos.length;
+
+        const reductionRatio =
+            subtotal > 0
+            ? (
+                validCombinations /
+                subtotal *
+                100
+              ).toFixed(2)
+            : "0.00";
+
+        html += `
+        <div class="result-card">
+        <b>CC aggregation:</b>
+        ${struct.map(
+            x => `${x}CC`
+        ).join(" + ")}
+        <br><br>`;
+
+        bandCounts.forEach(
+            (count,i) => {
+
+            html += `
+            Band ${matches[i][1]}
+            (Class ${matches[i][2]})
+            : ${count} feasible cases
+            <br>`;
+        });
+
+        html += `
+        <br>
+        Total feasible cases:
+        ${bandCounts.join(" × ")}
+        = ${subtotal}
+        <br>
+        Valid CC aggregation:
+        ${validCombinations}
+        </div>`;
+    }
+
+    html += `
+    <h3>
+    </br>
+    TOTAL VALID CC AGGREGATION:
+    ${valid.length}
+    </h3>`;
+
+    document.getElementById("output").innerHTML =
+        html;
+}
+
+analyzeCA();
+
+</script>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+
+  <!-- Default Statcounter code for PSHH lab
+  https://pshhlab.github.io -->
+  <script type="text/javascript">
+  var sc_project=12714332; 
+  var sc_invisible=0; 
+  var sc_security="8873dfa3"; 
+  var sc_text=2; 
+  var scJsHost = "https://";
+  document.write("<sc"+"ript type='text/javascript' src='" +
+  scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="Web Analytics
+  Made Easy - Statcounter" href="https://statcounter.com/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/12714332/0/8873dfa3/0/"
+  alt="Web Analytics Made Easy - Statcounter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->  
+
+</body>
+
+</html>
