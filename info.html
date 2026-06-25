@@ -3,191 +3,629 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta charset="UTF-8" />
 
-  <title>PSHH Laboratory</title>
+  <meta
+    name="viewport"
+    content="width=1100"
+  />
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <title>CA configuration analyzer - PSHH Laboratory, Sejong University</title>
 
-  <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <!-- Google Font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: none;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+
+      background: #d1d5db;
+
+      font-family: "Inter", sans-serif;
+
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+
+    a {
+      color: #0068FF;
+    }
+
+    /* =======================================================
+       FIXED A4 LAYOUT
+    ======================================================= */
+
+    .page-wrapper {
+
+      width: 100vw;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      overflow: auto;
+    }
+
+    .a4-page {
+
+      width: 1100px;
+      min-height: 1123px;
+
+      background: white;
+
+      transform-origin: top center;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.15);
+
+      position: relative;
+    }
+
+    /* =======================================================
+       CONTENT
+    ======================================================= */
+
+    .container {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    /* HERO */
+
+    .hero {
+
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+      background:#526379;
+
+      text-align: center;
+    }
+
+    .hero h1 {
+
+      font-size: 36px;
+      font-weight: 700;
+
+      letter-spacing: -1.5px;
+
+      color: #ffffff;
+
+      margin-bottom: 5px;
+
+    }
+
+    .hero p {
+
+      font-size: 14px;
+
+      color: #d1d1d1;
+
+      font-weight: 400;
+
+    }
+
+    /* SECTION */
+
+    section {
+
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .section-title {
+
+      font-size: 25px;
+      font-weight: 700;
+
+      color: #111827;
+
+      margin-bottom: 15px;
+
+      letter-spacing: -0.5px;
+    }
+
+    /* ABOUT */
+
+    .about-text {
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      color: #374151;
+
+      text-align: justify;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* PROJECT TABLE STYLE */
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .project-item {
+
+      display: grid;
+
+      grid-template-columns: 1fr 155px;
+
+      gap: 5px;
+
+      padding: 0 0;
+
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .project-time {
+
+      font-style: italic;
+
+      color: #4b5563;
+
+      text-align: right;
+
+      font-size: 16px;
+
+      padding-top: 4px;
+    }
+
+    .project-content p {
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      color: #6b7280;
+    }
+
+    /* STUDENT */
+
+    .student-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 14px;
+
+      list-style-position: outside;
+    }
+
+    .student-item {
+
+      line-height: 1.7;
+      color: #4b5563;
+      font-size: 16px;
+    }
+
+    /* Journal */
+
+    .journal-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 30px;
+
+      list-style-position: outside;
+    }
+
+    /* Patent */
+
+    .patent-list {
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0px;
+
+      margin: 0;
+
+      text-align: justify;
+
+      padding-left: 20px;
+
+      list-style-position: outside;
+    }
+
+    /* MEMBER DIVIDER */
+
+    .member-divider {
+
+      position: relative;
+
+      text-align: center;
+
+      /* margin-top: 18px; */
+      margin-bottom: 18px;
+
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .member-divider span {
+
+      display: inline-block;
+
+      position: relative;
+
+      top: 10px;
+
+      padding: 0 14px;
+
+      background: white;
+
+      font-size: 14px;
+
+      font-weight: 400;
+
+      letter-spacing: 1px;
+
+      /* text-transform: uppercase; */
+
+      color: #9ca3af;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      border-top: 1px solid #e5e7eb;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #6b7280;
+
+      background:#c8c8c8;
+    }
+
+    /* TELEGRAM FLOATING BUTTON */
+
+    .telegram-floating {
+
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 62px;
+      height: 62px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #229ED9;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 28px;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+
+      transition: 0.25s;
+
+      z-index: 9999;
+    }
+
+    .telegram-floating:hover {
+
+      transform: scale(1.08);
+    }
+
+
+.result-card{
+
+  margin-top:15px;
+
+  border-left:4px solid #526379;
+
+  padding:15px;
+
+  background:#f9fafb;
+
+  border-radius:4px;
+}
+
+.good{
+  color:#16a34a;
+  font-weight:600;
+}
+
+.medium{
+  color:#ca8a04;
+  font-weight:600;
+}
+
+.bad{
+  color:#dc2626;
+  font-weight:600;
+}
+
+  </style>
 
 </head>
 
-<body id="page-top">
+<body>
 
-  <header class="bg-primary text-white">
-    <div class="container text-center">
-      <h1>Internal Information</h1>
-      <p class="lead" style="text-align:center;">PSHH Lab, Sejong University</p>
-    </div>
-  </header>
+  <!-- =======================================================
+       PAGE WRAPPER
+  ======================================================== -->
 
-          
-  <section id="access" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Internet Access</h5>
-      		  <ul class="lead" style="list-style-type:square">
-      			<li>WiFi SSID: PSHH &emsp; Password: pshh2020!</li>
-            <li>WiFi SSID: sejong-guest &emsp; Password: 0234083114</li>
-      		  </ul>
+  <div class="page-wrapper">
+
+    <div class="a4-page" id="home">
+
+      <!-- header -->
+
+      <div class="hero">
+
+        <div class="container">
+
+          <img src="logo.png" width="293" height="86">
+
+          <h1>
+            <br>Internal Information
+          </h1>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="printer" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Printer</h5>
-      		  <ul class="lead" style="list-style-type:square">
-            <li>Step 1: Wirelessly access the PSHH WiFi network</li>
-            <li>Step 2: Add the printer via IP address at 10.0.0.10</li>
-      			<li>Step 3: Add the scanner using the same IP address above</li>
-      		  </ul>
-            <i>Note: The printer is located at room #431</i>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="proxy" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>SJU Proxy</h5>
-            <ul class="lead" style="list-style-type:square">
-            <li>Step 1: Add https://eproxy.sejong.ac.kr/link.n2s?url= before the URL</li>
-            <li>Step 2: Login using your student number and password</li>
+      <!-- about -->
+
+      <section>
+        <div class="container">
+          <h2 class="section-title">
+            Introduction
+          </h2>
+
+          <p class="about-text">
+            This page is for members of PSHH lab only.
+          </p>
+
+          </br>
+
+          <h2 class="section-title">Internet Access</h2>
+
+          <ul style="list-style-type:square" class="student-list">
+            <li class="student-item">WiFi SSID: PSHH &emsp; Password: pshh2020!</li>
+            <li class="student-item">WiFi SSID: sejong-guest &emsp; Password: 0234083114</li>
+          </ul>
+
+          </br>
+
+          <h2 class="section-title">Printer</h2>
+
+          <ul style="list-style-type:square" class="student-list">
+            <li class="student-item">Step 1: Wirelessly access the PSHH WiFi network</li>
+            <li class="student-item">Step 2: Add the printer via IP address at 10.0.0.10</li>
+      			<li class="student-item">Step 3: Add the scanner using the same IP address above</li>
+      		</ul>
+          <p class="about-text"><i>Note: The printer is located at room #431</i></p>
+
+          </br>
+
+          <h2 class="section-title">SJU Proxy</h2>
+
+          <ul style="list-style-type:square" class="student-list">
+            <li class="student-item">Step 1: Add https://eproxy.sejong.ac.kr/link.n2s?url= before the URL</li>
+            <li class="student-item">Step 2: Login using your student number and password</li>
             </ul>
-            <i>Using the SJU proxy service, students can access scientific resources as in Seoul campus.</i>
-        </div>
-      </div>
-    </div>
-  </section>
+            <p class="about-text"><i>Using the SJU proxy service, students can access scientific resources as in Seoul campus.</i></p>
 
-  <section id="research" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Research Orientation</h5> &emsp; <a href="/Orientation.pdf">Download here</a>
-        </div>
-      </div>
-    </div>
-  </section>
+          </br>
 
-  <section id="pptxtemp" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Powerpoint template</h5> &emsp; <a href="/pptxtemplate.pptx">Download here</a>
-        </div>
-      </div>
-    </div>
-  </section>
+          <h2 class="section-title">Research Orientation</h2> &emsp; <a href="/Orientation.pdf">Download here</a>
 
+          </br></br>
 
-  <section id="journal" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Potential Journals</h5>
-            <ol class="lead">
-              <li>IEEE Communications Surveys and Tutorials (IEEE)</li>
-              <li>Proceedings of the IEEE (IEEE)</li>
-              <li>IEEE Wireless Communications (IEEE)</li>
-              <li>Computer Science Review (Elsevier)</li>
-              <li>IEEE Journal on Selected Areas in Communications (IEEE)</li>
-              <li>Information Fusion (Elsevier)</li>
-              <li>IEEE Internet of Things Journal (IEEE)</li>
-              <li>ACM Computing Surveys (ACM)</li>
-              <li>Journal of Network and Computer Applications (Elsevier)</li>
-              <li>Artificial Intelligence (Elsevier)</li>
-              <li>IEEE Transactions on Services Computing (IEEE)</li>
-              <li>IEEE Communications Magazine (IEEE)</li>
-              <li>IEEE Transactions on Network Science and Engineering (IEEE)</li>
-              <li>Artificial Intelligence Review (Springer)</li>
-              <li>IEEE Network (IEEE)</li>
-              <li>IEEE Transactions on Multimedia (IEEE)</li>
-              <li>Engineering Applications of Artificial Intelligence (Elsevier)</li>
-              <li>IEEE Transactions on Dependable and Secure Computing (IEEE)</li>
-              <li>IEEE Transactions on Wireless Communications (IEEE)</li>
-              <li>Expert Systems with Applications (Elsevier)</li>
-              <li>Journal of Big Data (Springer)</li>
-              <li>Information Sciences (Elsevier)</li>
-              <li>Future Generation Computer Systems (Elsevier)</li>
-              <li>IEEE Transactions on Cognitive Communications and Networking (IEEE)</li>
-              <li>Reliability Engineering & System Safety (Elsevier)</li>
-              <li>IEEE Transactions on Communications (IEEE)</li>
-              <li>IEEE Transactions on Mobile Computing (IEEE)</li>
-              <li>IEEE Vehicular Technology Magazine (IEEE)</li>
-              <li>IEEE Transactions on Information Forensics and Security (IEEE)</li>
-              <li>Digital Communications and Networks (Elsevier)</li>
-              <li>IEEE Transactions on Cloud Computing (IEEE)</li>
-              <li>ACM Transactions on Internet Technology (ACM)</li>
-              <li>Knowledge-Based Systems (Elsevier)</li>
-              <li>IEEE Transactions on Vehicular Technology (IEEE)</li>
-              <li>Computer Networks (Elsevier)</li>
-              <li>ACM Transactions on Multimedia Computing Communications and Applications (ACM)</li>
-              <li>Vehicular Communications (Elsevier)</li>
-              <li>Computer Communications (Elsevier)</li>
-              <li>Internet of Things (Elsevier)</li>
-              <li>Virtual Reality (Springer)</li>
-              <li>IEEE Sensors Journal (IEEE)</li>
-              <li>Journal of Information Security and Applications (Elsevier)</li>
-              <li>Computers & Security (Elsevier)</li>
-              <li>ACM Transactions on Information Systems (ACM)</li>
-              <li>IEEE-ACM Transactions on Networking (IEEE/ACM)</li>
-              <li>IEEE Systems Journal (IEEE)</li>
-              <li>IEEE Transactions on Network and Service Management (IEEE)</li>
-              <li>IEEE Internet Computing (IEEE)</li>
-              <li>ACM Transactions on Sensor Networks (ACM)</li>
-              <li>IEEE Security and Privacy (IEEE)</li>
-              <li>ACM Transactions on Privacy and Security (ACM)</li>
-              <li>IEEE Pervasive Computing (IEEE)</li>
+          <h2 class="section-title">Powerpoint template</h2> &emsp; <a href="/pptxtemplate.pptx">Download here</a>
+
+          </br></br>
+
+          <h2 class="section-title">Potential Journals</h2>
+
+            <ol style="list-style-type:decimal" class="journal-list">
+              <li class="student-item">IEEE Communications Surveys and Tutorials (IEEE)</li>
+              <li class="student-item">Proceedings of the IEEE (IEEE)</li>
+              <li class="student-item">IEEE Wireless Communications (IEEE)</li>
+              <li class="student-item">Computer Science Review (Elsevier)</li>
+              <li class="student-item">IEEE Journal on Selected Areas in Communications (IEEE)</li>
+              <li class="student-item">Information Fusion (Elsevier)</li>
+              <li class="student-item">IEEE Internet of Things Journal (IEEE)</li>
+              <li class="student-item">ACM Computing Surveys (ACM)</li>
+              <li class="student-item">Journal of Network and Computer Applications (Elsevier)</li>
+              <li class="student-item">Artificial Intelligence (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Services Computing (IEEE)</li>
+              <li class="student-item">IEEE Communications Magazine (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Network Science and Engineering (IEEE)</li>
+              <li class="student-item">Artificial Intelligence Review (Springer)</li>
+              <li class="student-item">IEEE Network (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Multimedia (IEEE)</li>
+              <li class="student-item">Engineering Applications of Artificial Intelligence (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Dependable and Secure Computing (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Wireless Communications (IEEE)</li>
+              <li class="student-item">Expert Systems with Applications (Elsevier)</li>
+              <li class="student-item">Journal of Big Data (Springer)</li>
+              <li class="student-item">Information Sciences (Elsevier)</li>
+              <li class="student-item">Future Generation Computer Systems (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Cognitive Communications and Networking (IEEE)</li>
+              <li class="student-item">Reliability Engineering & System Safety (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Communications (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Mobile Computing (IEEE)</li>
+              <li class="student-item">IEEE Vehicular Technology Magazine (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Information Forensics and Security (IEEE)</li>
+              <li class="student-item">Digital Communications and Networks (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Cloud Computing (IEEE)</li>
+              <li class="student-item">ACM Transactions on Internet Technology (ACM)</li>
+              <li class="student-item">Knowledge-Based Systems (Elsevier)</li>
+              <li class="student-item">IEEE Transactions on Vehicular Technology (IEEE)</li>
+              <li class="student-item">Computer Networks (Elsevier)</li>
+              <li class="student-item">ACM Transactions on Multimedia Computing Communications and Applications (ACM)</li>
+              <li class="student-item">Vehicular Communications (Elsevier)</li>
+              <li class="student-item">Computer Communications (Elsevier)</li>
+              <li class="student-item">Internet of Things (Elsevier)</li>
+              <li class="student-item">Virtual Reality (Springer)</li>
+              <li class="student-item">IEEE Sensors Journal (IEEE)</li>
+              <li class="student-item">Journal of Information Security and Applications (Elsevier)</li>
+              <li class="student-item">Computers & Security (Elsevier)</li>
+              <li class="student-item">ACM Transactions on Information Systems (ACM)</li>
+              <li class="student-item">IEEE-ACM Transactions on Networking (IEEE/ACM)</li>
+              <li class="student-item">IEEE Systems Journal (IEEE)</li>
+              <li class="student-item">IEEE Transactions on Network and Service Management (IEEE)</li>
+              <li class="student-item">IEEE Internet Computing (IEEE)</li>
+              <li class="student-item">ACM Transactions on Sensor Networks (ACM)</li>
+              <li class="student-item">IEEE Security and Privacy (IEEE)</li>
+              <li class="student-item">ACM Transactions on Privacy and Security (ACM)</li>
+              <li class="student-item">IEEE Pervasive Computing (IEEE)</li>
             </ol>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="conference" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <h5>Potential Conferences</h5>
-            <ol class="lead">
-              <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
-              <li>IEEE Conference on Computer Communications (INFOCOM)</li>
-              <li>ACM International Conference on Mobile Computing and Networking (MobiCom)</li>
-              <li>ACM Conference on Computer and Communications Security (CCS)</li>
-              <li>IEEE International Conference on Communication (ICC)</li>
-              <li>IEEE Global Communications Conference (GLOBECOM)</li>
-              <li>ACM Conference on Human Factors in Computing Systems (CHI)</li>
-              <li>ACM Multimedia Conference (MM)</li>
-              <li>IEEE Symposium on Security and Privacy (S&P)</li>
-              <li>ACM Web Conference (WWW)</li>
-              <li>ACM Conference on Embedded Networked Sensor Systems (SenSys)</li>
-              <li>USENIX Security Symposium (Security)</li>
-              <li>ACM International Conference on Mobile Systems, Application and Services (MobiSys)</li>
-              <li>ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc)</li>
-              <li>IEEE International Conference on Pervasive Computing and Communications (PerCom)</li>
+          </br>
+
+          <h2 class="section-title">Potential Conferences</h2>
+            <ol style="list-style-type:decimal" class="journal-list">
+              <li class="student-item">AAAI Conference on Artificial Intelligence (AAAI)</li>
+              <li class="student-item">IEEE Conference on Computer Communications (INFOCOM)</li>
+              <li class="student-item">ACM International Conference on Mobile Computing and Networking (MobiCom)</li>
+              <li class="student-item">ACM Conference on Computer and Communications Security (CCS)</li>
+              <li class="student-item">IEEE International Conference on Communication (ICC)</li>
+              <li class="student-item">IEEE Global Communications Conference (GLOBECOM)</li>
+              <li class="student-item">ACM Conference on Human Factors in Computing Systems (CHI)</li>
+              <li class="student-item">ACM Multimedia Conference (MM)</li>
+              <li class="student-item">IEEE Symposium on Security and Privacy (S&P)</li>
+              <li class="student-item">ACM Web Conference (WWW)</li>
+              <li class="student-item">ACM Conference on Embedded Networked Sensor Systems (SenSys)</li>
+              <li class="student-item">USENIX Security Symposium (Security)</li>
+              <li class="student-item">ACM International Conference on Mobile Systems, Application and Services (MobiSys)</li>
+              <li class="student-item">ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc)</li>
+              <li class="student-item">IEEE International Conference on Pervasive Computing and Communications (PerCom)</li>
             </ol>
+
         </div>
-      </div>
+    </section>
+
     </div>
-  </section>
+
+  </div>
 
 
-<footer class="py-5 bg-dark">
-</footer>
+  <!-- =======================================================
+       SCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =======================================================
+       FIXED A4 AUTO SCALE
+    ======================================================= */
+
+    function scaleA4Page() {
+
+      const page =
+        document.querySelector(".a4-page");
+
+      const wrapper =
+        document.querySelector(".page-wrapper");
+
+      const screenWidth =
+        window.innerWidth - 40;
+
+      const screenHeight =
+        window.innerHeight - 40;
+
+      const scaleX =
+        screenWidth / 794;
+
+      const scaleY =
+        screenHeight / 1123;
+
+      const scale =
+        Math.min(scaleX, scaleY, 1);
+
+      page.style.transform =
+        `scale(${scale})`;
+
+      wrapper.style.height =
+        `${1123 * scale + 40}px`;
+    }
+
+    window.addEventListener(
+      "resize",
+      scaleA4Page
+    );
+
+    scaleA4Page();
+
+  </script>
+
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -198,6 +636,27 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
+
+
+  <!-- Default Statcounter code for PSHH lab
+  https://pshhlab.github.io -->
+  <script type="text/javascript">
+  var sc_project=12714332; 
+  var sc_invisible=0; 
+  var sc_security="8873dfa3"; 
+  var sc_text=2; 
+  var scJsHost = "https://";
+  document.write("<sc"+"ript type='text/javascript' src='" +
+  scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="Web Analytics
+  Made Easy - Statcounter" href="https://statcounter.com/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/12714332/0/8873dfa3/0/"
+  alt="Web Analytics Made Easy - Statcounter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->  
 
 </body>
 
