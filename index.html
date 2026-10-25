@@ -80,8 +80,8 @@
 
     .a4-page {
       width: 100%;
-      max-width: 270mm;
-      min-height: 100vh;
+      max-width: 270mm; /* A4 standard width */
+      min-height: 100vh; /* A4 standard height */
       background: white;
       box-shadow: 0 10px 35px rgba(0,0,0,0.15);
       position: relative;
@@ -113,9 +113,16 @@
       height: auto;
     }
 
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
 
     .hero p {
-      font-size: 16px;
+      font-size: 14px;
       color: #d1d1d1;
       font-weight: 400;
     }
@@ -205,8 +212,13 @@
       border-top: 1px solid #e5e7eb;
     }
 
-
-    .about-section { border-top: none; }
+    .section-title {
+      font-size: 25px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
 
     /* ABOUT */
 
@@ -278,11 +290,6 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
     }
 
-    .director-photo {
-      border-radius: 50%;
-      height: 110px;
-    }
-
     .member-info {
       flex: 1;
     }
@@ -305,7 +312,6 @@
         color: slategray;
         font-size: 0.85rem;   /* ≈ <font size="2"> */
         font-style: italic;
-        text-align: justify;
     }
 
     .contact-line .material-symbols-outlined {
@@ -315,25 +321,46 @@
     }
 
 
-    /* Shared publication and student list configuration */
-    .student-list, .journal-list, .patent-list {
+    /* STUDENT */
+
+    .student-list {
       display: flex;
       flex-direction: column;
+      gap: 0px;
       margin: 0;
       text-align: justify;
+      padding-left: 14px;
       list-style-position: outside;
     }
-
-    .student-list { padding-left: 14px; }
-    .journal-list { padding-left: 30px; }
-    .patent-list { padding-left: 20px; }
-    .student-list.list-square { list-style-type: square; }
-    .student-list.list-disc { list-style-type: disc; }
 
     .student-item {
       line-height: 1.7;
       color: #4b5563;
       font-size: 15px;
+    }
+
+    /* Journal */
+
+    .journal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      margin: 0;
+      text-align: justify;
+      padding-left: 30px;
+      list-style-position: outside;
+    }
+
+    /* Patent */
+
+    .patent-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      margin: 0;
+      text-align: justify;
+      padding-left: 20px;
+      list-style-position: outside;
     }
 
     /* MEMBER DIVIDER */
@@ -395,37 +422,6 @@
       transform: scale(1.08);
     }
 
-    /* Alumni-only layout. Current member cards retain their original layout. */
-    .alumni-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px 28px;
-    }
-
-    .alumni-grid > .member-card {
-      min-width: 0;
-      gap: 14px;
-    }
-
-    .alumni-grid .member-info {
-      min-width: 0;
-      overflow-wrap: anywhere;
-    }
-
-    .alumni-grid .contact-line {
-      align-items: flex-start;
-      line-height: 1.6;
-      max-width: 100%;
-    }
-
-    .alumni-grid .material-symbols-outlined {
-      flex-shrink: 0;
-    }
-
-    @media screen and (max-width: 760px) {
-      .alumni-grid { grid-template-columns: minmax(0, 1fr); }
-    }
-
     /* Responsive Adjustments */
     @media screen and (max-width: 600px) {
       .project-item {
@@ -474,7 +470,7 @@
 
           <img src="logo.png" width="293" height="86" alt="PSHH Logo">
 
-          <p><br>Research Institute for Data Science and Artificial Intelligence, Hallym University, South Korea
+          <p style="font-size:16px"><br>Research Institute for Data Science and Artificial Intelligence, Hallym University, South Korea
           </p>
 
         </div>
@@ -483,7 +479,7 @@
 
       <!-- about -->
 
-      <section class="about-section">
+      <section style="border-top: none;">
 
         <div class="container">
 
@@ -514,14 +510,14 @@
       ======================================================== -->
       <div class="slider-container" id="slider-container">
         <div class="slider-track" id="slider-track">
-
+          
           <!-- SLIDE: MEMBERS -->
           <section class="slide-section" id="members">
             <div class="container">
 
               <div class="member-card">
                   <div class="photo-container">
-                  <img alt="Nhu-Ngoc Dao" src="members/nndao.jpeg" class="member-photo director-photo" onerror="this.onerror=null; this.src='members/default.png'">
+                  <img src="members/nndao.jpeg" class="member-photo" style="border-radius: 50%; height: 110px; width: 110px;" onerror="this.src='members/default.png'">
                       <!-- <span class="fi fi-kr flag-icon"></span><span class="fi fi-vn flag-icon" style="right: 29px;"></span> -->
                   </div>
                   <div class="member-info">
@@ -538,9 +534,7 @@
                           <span><a target="_blank" rel="noopener noreferrer" href="https://nndao.github.io">https://nndao.github.io</a></span>
                       </div>                      
                   </div>
-              </div> 
-              
-              <div class="alumni-grid" role="group" aria-label="Alumni">              
+              </div>        
               <div class="member-card">
                   <div class="photo-container">
                   <img src="members/tuan.jpg" class="member-photo" onerror="this.src='members/default.png'">
@@ -567,13 +561,17 @@
                   </div>
                   <div class="member-info">
                       <div class="student-item">
-                          <b>Minh Phuoc Nguyen</b> <br>MS (09.24~08.26), PhD student since 09.2026<br>
+                          <b>Minh Phuoc Nguyen</b> <br>MS (09.2024 – 08.2026), PhD student since 09.2026<br>
                       </div>
                       <div class="contact-line">
                           <span class="material-symbols-outlined">mail</span>
                           <span>minhphuocdzvn@sju.ac.kr</span>
                       </div>
                       <br>
+                      <div class="contact-line">
+                          <span class="material-symbols-outlined">language</span>
+                      </div>
+                      <br>                   
                       <div class="contact-line">
                           <span class="material-symbols-outlined">menu_book</span>
                           <span>Automated AI-driven platform for comprehensive Kirby-Bauer antibiogram testing analysis [<a target="_blank" rel="noopener noreferrer" href="https://www.riss.kr/link?id=T17570634">RISS</a>]</span>
@@ -656,7 +654,6 @@
                           <span class="material-symbols-outlined">language</span>
                       </div>                      
                   </div>
-              </div>
               </div>        
 
               <div class="member-divider">
@@ -788,6 +785,56 @@
             </div>
           </section>
 
+          <!-- SLIDE: PROJECTS -->
+          <section class="slide-section" id="projects">
+            <div class="container">
+              <div class="project-list">
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Semantic Resource Optimization for 6G Drone Constellations<br><i>Sponsor:</i> Hallym University (South Korea)</p>
+                  </div>
+                  <div class="project-time">10.2026 – 09.2027</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>CeDyNet: Cell-dynamic aerial access point constellations for immersive infotainment mobilities<br><i>Sponsor:</i> NRF (South Korea)</p>
+                  </div>
+                  <div class="project-time">03.2026 – 02.2029</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Sustainable beekeeping through drone-assisted beehive management with deep learning and geotagged resources<br><i>Sponsor:</i> ISIF Asia (APNIC Foundation)</p>
+                  </div>
+                  <div class="project-time">10.2025 – 03.2027</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Development of end-to-end 8 ultra-communication and networking technologies<br><i>Sponsor:</i> IITP (South Korea)</p>
+                  </div>
+                  <div class="project-time">07.2022 – 12.2029</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Assisting natural beekeeping in rural and remote areas using LoRa-based IoT and drones<br><i>Sponsor:</i> ISIF Asia (APNIC Foundation)</p>
+                  </div>
+                  <div class="project-time">01.2023 – 06.2024</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Intelligent adaptive bitrate video streaming empowered by cross-tier user-centric edge caching systems<br><i>Sponsor:</i> NRF (South Korea)</p>
+                  </div>
+                  <div class="project-time">03.2021 – 02.2024</div>
+                </div>
+                <div class="project-item">
+                  <div class="project-content">
+                    <p>Hit ratio and content quality tradeoff for adaptive bitrate streaming in edge caching systems<br><i>Sponsor:</i> Sejong University (South Korea)</p>
+                  </div>
+                  <div class="project-time">03.2020 – 02.2021</div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
           <!-- SLIDE: BOOKS -->
           <section class="slide-section" id="books">
             <div class="container">
@@ -810,7 +857,7 @@
           <!-- SLIDE: JOURNALS -->
           <section class="slide-section" id="journals">
             <div class="container">
-              <ol reversed class="journal-list">
+              <ol reversed style="list-style-type:decimal" class="journal-list">
                 <li class="student-item">Na W, Lee D, <b>Dao NN</b>, Hoang TM, and Cho S, "Beyond connectivity: Semantic communication unlocks the hyper-connected city with 6G", <i>IEEE Communications Magazine</i>. In press. [<a target="_blank" rel="noopener noreferrer" href="">IEEE</a>]</li>
                 <li class="student-item">Do TS, Truong TP, Tran KNT, Mac HD, Kim J, Nguyen TH, <b>Dao NN</b>, and Cho S, "On energy efficiency for multi-flow semantic routing in multi-UAV relay networks", <i>Journal of Network and Computer Applications</i>. In press. [<a target="_blank" rel="noopener noreferrer" href="">Elsevier</a>]</li>
                 <li class="student-item">Do TS, Truong TP, Ho MC, Do QT, <b>Dao NN</b>, Kim H, and Cho S, "Optimal mean-field Stackelberg game-inspired resource allocation for scalable multi-modal semantic communications in 6G networks", <i>IEEE Transactions on Communications</i>, vol. 74, pp. 13640-13656, 2026. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/TCOMM.2026.3729489">IEEE</a>]</li>
@@ -902,7 +949,7 @@
           <!-- SLIDE: CONFERENCES -->
           <section class="slide-section" id="conferences">
             <div class="container">
-              <ol reversed class="journal-list">
+              <ol reversed style="list-style-type:decimal" class="journal-list">
                 <li class="student-item">Hoang TM, Luu TT, Nguyen QN, Nguyen QK, and <b>Dao NN</b>, "Energy-aware online fog scheduling for mixed agricultural sensing platforms", <i>International Conference on Ubiquitous and Future Networks (ICUFN)</i>, pp. 12-17, Milan, Italy, July 7-10, 2026. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/ICUFN69619.2026.11628706">IEEE</a>]</li>
                 <li class="student-item">Lam SC, Vu Q, Tran DT, <b>Dao NN</b>, and Hoang TM, "Uplink cooperative NOMA with downlink energy harvesting in PPP-based ultra-dense networks", <i>International Conference on Information Networking (ICOIN)</i>, pp. 7-12, Hanoi, Vietnam, January 14-16, 2026. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/ICOIN68469.2026.11480515">IEEE</a>]</li>
                 <li class="student-item">Samanta A, Truong TP, <b>Dao NN</b>, and Cho S, "Loss-aware adaptive load balancing scheme for IoT-enabled WBANs with QoS-factor", <i>International Conference on Intelligence of Things (ICIT)</i>, pp. 262-274, Da Nang, Vietnam, September 12-14, 2024. [<a target="_blank" rel="noopener noreferrer" href=" https://doi.org/10.1007/978-3-031-75593-4_24">Springer</a>]</li>
@@ -927,7 +974,7 @@
           <!-- SLIDE: PATENTS -->
           <section class="slide-section" id="patents">
             <div class="container">
-              <ol reversed class="patent-list">
+              <ol reversed style="list-style-type:decimal" class="patent-list">
                 <li class="student-item">Cho S, <b>Dao NN</b>, and Hong W, "Method for controlling adaptive bitrate streaming", <i>Korean patent KR102854354</i>, August 29, 2025. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.8080/1020220170764">KIPRIS</a>]</li>
                 <li class="student-item">Cho S, Vu DN, and <b>Dao NN</b>, "The method for scheduling tasks in real time using pattern-identification in multitier edge computing and the system thereof", <i>Korean patent KR102068676</i>, January 15, 2020. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.8080/1020180089619">KIPRIS</a>]</li>
                 <li class="student-item">Cho S, Vu DN, and <b>Dao NN</b>, "Dynamic resource orchestration for fog-enabled industrial Internet of things networks", <i>Korean patent KR102056894</i>, December 17, 2019. [<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.8080/1020180088787">KIPRIS</a>]</li>
@@ -967,7 +1014,6 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const track = document.getElementById("slider-track");
-      const sliderContainer = document.getElementById("slider-container");
       const slides = Array.from(document.querySelectorAll(".slide-section"));
       const navBtns = Array.from(document.querySelectorAll(".nav-btn"));
 
@@ -991,22 +1037,19 @@
         const activeSlide = slides[currentIndex];
         if(activeSlide) {
             const newHeight = activeSlide.offsetHeight;
-            sliderContainer.style.height = newHeight + "px";
+            document.getElementById("slider-container").style.height = newHeight + "px";
         }
       }
 
-      // Observe the active slide only. This also covers image and font loading.
-      const resizeObserver = typeof ResizeObserver !== "undefined"
-        ? new ResizeObserver(updateHeight)
-        : null;
-      if (!resizeObserver) {
-        window.addEventListener("resize", updateHeight);
-        document.querySelectorAll(".slider-container img").forEach(img => {
-          img.addEventListener("load", updateHeight);
-          img.addEventListener("error", updateHeight);
-        });
-        window.addEventListener("load", updateHeight);
-      }
+      // Height observation immediately when the page loads
+      const resizeObserver = new ResizeObserver(() => updateHeight());
+      slides.forEach(slide => resizeObserver.observe(slide));
+
+      const images = document.querySelectorAll('.slider-container img');
+      images.forEach(img => {
+          if (img.complete) updateHeight();
+          else img.addEventListener('load', updateHeight);
+      });
 
       // 3. Update UI State Function
       function updateUI() {
@@ -1018,15 +1061,13 @@
         if (index < 0) index = 0;
         if (index >= slides.length) index = slides.length - 1;
 
-        if (resizeObserver) resizeObserver.disconnect();
         currentIndex = index;
-        if (resizeObserver) resizeObserver.observe(slides[currentIndex]);
         currentTranslate = currentIndex * -100;
         prevTranslate = currentTranslate;
-
+        
         track.style.transition = "transform 0.4s cubic-bezier(.22, .61, .36, 1)";
         track.style.transform = `translateX(${currentTranslate}%)`;
-
+        
         updateUI();
         updateHeight();
 
@@ -1034,7 +1075,7 @@
           const targetHash = slides[currentIndex].id;
           history.pushState(null, null, `#${targetHash}`);
         }
-
+        
         const activeNavBtn = navBtns[currentIndex];
         if (activeNavBtn) {
           activeNavBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -1051,17 +1092,21 @@
             return;
           }
         }
-
+        
         // Default on open is 'members'
         const defaultIndex = slides.findIndex(slide => slide.id === 'members');
         if (defaultIndex !== -1) {
             goToSlide(defaultIndex, false);
         }
       }
-
+      
       window.addEventListener("hashchange", handleHashChange);
-
-      handleHashChange();
+      
+      window.addEventListener("load", () => {
+        handleHashChange(); 
+      });
+      
+      window.addEventListener("resize", updateHeight);
 
       // 6. Keyboard Accessibility
       window.addEventListener("keydown", (e) => {
@@ -1078,7 +1123,7 @@
 
       function touchStart(event) {
         if(event.type.includes("mouse")) event.preventDefault();
-
+        
         isDragging = true;
         startPos = getPositionX(event);
         animationID = requestAnimationFrame(animation);
@@ -1098,7 +1143,7 @@
         if (!isDragging) return;
         isDragging = false;
         cancelAnimationFrame(animationID);
-
+        
         const movedBy = currentTranslate - prevTranslate;
 
         if (movedBy < -15 && currentIndex < slides.length - 1) currentIndex += 1;
@@ -1109,15 +1154,15 @@
 
       function animation() {
         track.style.transform = `translateX(${currentTranslate}%)`;
-        if (isDragging) animationID = requestAnimationFrame(animation);
+        if (isDragging) requestAnimationFrame(animation);
       }
 
       track.addEventListener("mousedown", touchStart);
       track.addEventListener("touchstart", touchStart, { passive: true });
-
+      
       track.addEventListener("mousemove", touchMove);
       track.addEventListener("touchmove", touchMove, { passive: true });
-
+      
       track.addEventListener("mouseup", touchEnd);
       track.addEventListener("touchend", touchEnd);
       track.addEventListener("mouseleave", () => {
