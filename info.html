@@ -35,7 +35,6 @@
   />
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -50,15 +49,9 @@
     body {
       width: 100%;
       min-height: 100%;
-    }
-
-    body {
-
       background: #d1d5db;
-
       font-family: "Inter", sans-serif;
-
-      overflow-x: auto;
+      overflow-x: hidden;
       overflow-y: auto;
     }
 
@@ -66,40 +59,24 @@
       color: #0068FF;
     }
 
-    /* =======================================================
-       FIXED A4 LAYOUT
-    ======================================================= */
-
     .page-wrapper {
-
-      width: 100vw;
+      width: 100%;
       min-height: 100vh;
-
       display: flex;
       justify-content: center;
       align-items: flex-start;
-
-      overflow: auto;
     }
 
     .a4-page {
-
-      width: 1100px;
-      min-height: 1123px;
-
+      width: 100%;
+      max-width: 270mm;
+      min-height: 100vh;
       background: white;
-
-      transform-origin: top center;
-
-      box-shadow:
-        0 10px 35px rgba(0,0,0,0.15);
-
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
-
-    /* =======================================================
-       CONTENT
-    ======================================================= */
 
     .container {
       width: 100%;
@@ -107,308 +84,95 @@
       padding-right: 30px;
     }
 
-    /* HERO */
-
     .hero {
-
       padding-top: 30px;
       padding-bottom: 20px;
-
-      background:#526379;
-
+      background: #526379;
       text-align: center;
     }
 
-    .hero h1 {
+    .hero img {
+      max-width: 100%;
+      height: auto;
+    }
 
+    .hero h1 {
       font-size: 36px;
       font-weight: 700;
-
       letter-spacing: -1.5px;
-
       color: #ffffff;
-
       margin-bottom: 5px;
-
     }
-
-    .hero p {
-
-      font-size: 14px;
-
-      color: #d1d1d1;
-
-      font-weight: 400;
-
-    }
-
-    /* SECTION */
 
     section {
-
       padding-top: 30px;
       padding-bottom: 30px;
-
       border-top: 1px solid #e5e7eb;
     }
 
     .section-title {
-
       font-size: 25px;
       font-weight: 700;
-
       color: #111827;
-
       margin-bottom: 15px;
-
       letter-spacing: -0.5px;
     }
 
-    /* ABOUT */
-
     .about-text {
-
-      font-size: 16px;
-
+      font-size: 15px;
       line-height: 1.7;
-
       color: #374151;
-
       text-align: justify;
-
       margin-bottom: 10px;
     }
 
-
-    /* PROJECT TABLE STYLE */
-
-    .project-list {
+    .student-list,
+    .journal-list {
       display: flex;
       flex-direction: column;
-      gap: 0px;
+      text-align: justify;
+      list-style-position: outside;
     }
-
-    .project-item {
-
-      display: grid;
-
-      grid-template-columns: 1fr 155px;
-
-      gap: 5px;
-
-      padding: 0 0;
-
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .project-time {
-
-      font-style: italic;
-
-      color: #4b5563;
-
-      text-align: right;
-
-      font-size: 16px;
-
-      padding-top: 4px;
-    }
-
-    .project-content p {
-
-      font-size: 16px;
-
-      line-height: 1.7;
-
-      color: #6b7280;
-    }
-
-    /* STUDENT */
 
     .student-list {
-
-      display: flex;
-      flex-direction: column;
-
-      gap: 0px;
-
-      margin: 0;
-
-      text-align: justify;
-
       padding-left: 14px;
-
-      list-style-position: outside;
     }
 
     .student-item {
-
       line-height: 1.7;
       color: #4b5563;
-      font-size: 16px;
+      font-size: 15px;
     }
-
-    /* Journal */
 
     .journal-list {
-
-      display: flex;
-      flex-direction: column;
-
-      gap: 0px;
-
-      margin: 0;
-
-      text-align: justify;
-
       padding-left: 30px;
-
-      list-style-position: outside;
     }
-
-    /* Patent */
-
-    .patent-list {
-
-      display: flex;
-      flex-direction: column;
-
-      gap: 0px;
-
-      margin: 0;
-
-      text-align: justify;
-
-      padding-left: 20px;
-
-      list-style-position: outside;
-    }
-
-    /* MEMBER DIVIDER */
-
-    .member-divider {
-
-      position: relative;
-
-      text-align: center;
-
-      /* margin-top: 18px; */
-      margin-bottom: 18px;
-
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .member-divider span {
-
-      display: inline-block;
-
-      position: relative;
-
-      top: 10px;
-
-      padding: 0 14px;
-
-      background: white;
-
-      font-size: 14px;
-
-      font-weight: 400;
-
-      letter-spacing: 1px;
-
-      /* text-transform: uppercase; */
-
-      color: #9ca3af;
-    }
-
-
-    /* FOOTER */
 
     footer {
-
       padding-top: 20px;
       padding-bottom: 20px;
-
       border-top: 1px solid #e5e7eb;
-
       text-align: center;
-
       font-size: 13px;
-
       color: #6b7280;
-
-      background:#c8c8c8;
+      background: #c8c8c8;
+      margin-top: auto;
     }
 
-    /* TELEGRAM FLOATING BUTTON */
+    @media screen and (max-width: 600px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
 
-    .telegram-floating {
-
-      position: fixed;
-
-      right: 24px;
-      bottom: 24px;
-
-      width: 62px;
-      height: 62px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 50%;
-
-      background: #229ED9;
-
-      color: white;
-
-      text-decoration: none;
-
-      font-size: 28px;
-
-      box-shadow:
-        0 10px 25px rgba(0,0,0,0.18);
-
-      transition: 0.25s;
-
-      z-index: 9999;
-    }
-
-    .telegram-floating:hover {
-
-      transform: scale(1.08);
+      .journal-list,
+      .student-list {
+        padding-left: 20px;
+      }
     }
 
 
-.result-card{
-
-  margin-top:15px;
-
-  border-left:4px solid #526379;
-
-  padding:15px;
-
-  background:#f9fafb;
-
-  border-radius:4px;
-}
-
-.good{
-  color:#16a34a;
-  font-weight:600;
-}
-
-.medium{
-  color:#ca8a04;
-  font-weight:600;
-}
-
-.bad{
-  color:#dc2626;
-  font-weight:600;
-}
-
-  </style>
+</style>
 
 </head>
 
@@ -456,7 +220,7 @@
 
           <ul style="list-style-type:square" class="student-list">
             <li class="student-item">WiFi SSID: PSHH &emsp; Password: pshh2020!</li>
-            <li class="student-item">WiFi SSID: sejong-guest &emsp; Password: 0234083114</li>
+            <li class="student-item">WiFi SSID: Hallym WiFi &emsp; Password: 1111133333</li>
           </ul>
 
           </br>
@@ -468,19 +232,10 @@
             <li class="student-item">Step 2: Add the printer via IP address at 10.0.0.10</li>
       			<li class="student-item">Step 3: Add the scanner using the same IP address above</li>
       		</ul>
-          <p class="about-text"><i>Note: The printer is located at room #431</i></p>
+          <p class="about-text"><i>Note: The printer is located at room #1207, Engineering Building</i></p>
 
           </br>
 
-          <h2 class="section-title">SJU Proxy</h2>
-
-          <ul style="list-style-type:square" class="student-list">
-            <li class="student-item">Step 1: Add https://eproxy.sejong.ac.kr/link.n2s?url= before the URL</li>
-            <li class="student-item">Step 2: Login using your student number and password</li>
-            </ul>
-            <p class="about-text"><i>Using the SJU proxy service, students can access scientific resources as in Seoul campus.</i></p>
-
-          </br>
 
           <h2 class="section-title">Research Orientation</h2> &emsp; <a href="/Orientation.pdf">Download here</a>
 
@@ -556,7 +311,6 @@
               <li class="student-item">ACM International Conference on Mobile Computing and Networking (MobiCom)</li>
               <li class="student-item">ACM Conference on Computer and Communications Security (CCS)</li>
               <li class="student-item">IEEE International Conference on Communication (ICC)</li>
-              <li class="student-item">IEEE Global Communications Conference (GLOBECOM)</li>
               <li class="student-item">ACM Conference on Human Factors in Computing Systems (CHI)</li>
               <li class="student-item">ACM Multimedia Conference (MM)</li>
               <li class="student-item">IEEE Symposium on Security and Privacy (S&P)</li>
@@ -589,50 +343,7 @@
        SCRIPT
   ======================================================== -->
 
-  <script>
-
-    /* =======================================================
-       FIXED A4 AUTO SCALE
-    ======================================================= */
-
-    function scaleA4Page() {
-
-      const page =
-        document.querySelector(".a4-page");
-
-      const wrapper =
-        document.querySelector(".page-wrapper");
-
-      const screenWidth =
-        window.innerWidth - 40;
-
-      const screenHeight =
-        window.innerHeight - 40;
-
-      const scaleX =
-        screenWidth / 794;
-
-      const scaleY =
-        screenHeight / 1123;
-
-      const scale =
-        Math.min(scaleX, scaleY, 1);
-
-      page.style.transform =
-        `scale(${scale})`;
-
-      wrapper.style.height =
-        `${1123 * scale + 40}px`;
-    }
-
-    window.addEventListener(
-      "resize",
-      scaleA4Page
-    );
-
-    scaleA4Page();
-
-  </script>
+  
 
 
 

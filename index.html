@@ -80,8 +80,8 @@
 
     .a4-page {
       width: 100%;
-      max-width: 270mm; /* A4 standard width */
-      min-height: 100vh; /* A4 standard height */
+      max-width: 270mm;
+      min-height: 100vh;
       background: white;
       box-shadow: 0 10px 35px rgba(0,0,0,0.15);
       position: relative;
@@ -201,7 +201,7 @@
       flex: 0 0 100%;
       width: 100%;
       padding: 40px 0;
-      opacity: 1;
+
     }
 
     /* SECTION */
@@ -235,7 +235,7 @@
     .project-list {
       display: flex;
       flex-direction: column;
-      gap: 0px;
+
     }
 
     .project-item {
@@ -320,17 +320,19 @@
         display: block;
     }
 
-
     /* STUDENT */
 
-    .student-list {
+    .student-list,
+    .journal-list,
+    .patent-list {
       display: flex;
       flex-direction: column;
-      gap: 0px;
-      margin: 0;
       text-align: justify;
-      padding-left: 14px;
       list-style-position: outside;
+    }
+
+    .student-list {
+      padding-left: 14px;
     }
 
     .student-item {
@@ -339,28 +341,12 @@
       font-size: 15px;
     }
 
-    /* Journal */
-
     .journal-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      margin: 0;
-      text-align: justify;
       padding-left: 30px;
-      list-style-position: outside;
     }
 
-    /* Patent */
-
     .patent-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      margin: 0;
-      text-align: justify;
       padding-left: 20px;
-      list-style-position: outside;
     }
 
     /* MEMBER DIVIDER */
